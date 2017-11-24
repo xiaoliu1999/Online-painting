@@ -1,0 +1,338 @@
+body{
+	font-size: 12px;
+	color: #333;
+	font-family: "微软雅黑";
+}
+.top{
+	height: 40px;
+	background-color:#3e9fd2;
+}
+.top div{
+	height: 100%;
+	display: flex;
+	align-items: center;
+  }
+.top img{
+	height: 100%;
+}
+.top i{
+	font-size:25px;
+	text-align: center;
+	color: #fff;
+ }
+ .top_list{
+ 	font-size: 28px!important;
+ }
+ @keyframes slidedown{
+ 	from{height: 0px;}
+ 	to{height: 150px;}
+ }
+ .top_list_menu{
+ 	position: absolute;
+ 	right: 5px;
+ 	top: 100px;
+ 	width: 100px;
+ 	height:0px;
+ 	background-color: #ececec;
+ 	color: #3e9fd2;
+ 	font-size: 15px;
+ 	overflow: hidden;
+ 	 border-radius: 20px;
+ 	 z-index: 99;
+  }
+ .top_list_menu_active{
+ 	height: 150px;
+ 	 overflow: visible;
+ 	animation: slidedown 0.1s ease;
+ 	border: 1px solid #e2e2e2;
+ }
+ .top_list_menu i{
+ 	margin-right: 10px;
+ 	margin-left: 20px;
+ }
+  .top_list_menu ul{
+ 	 padding-left: 0px;
+  }
+ .top_list_menu ul:before{
+ 	content: '';
+ 	width: 0px;
+ 	height: 0px;
+ 	 border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #ececec;
+    position: absolute;
+    top: -19px;
+    left: 49px;
+ }
+ .top_list_menu li{
+ 	list-style: none;
+ 	height: 42px;
+ 	line-height: 42px;
+ 	border-top: 1px solid #acd4e6;
+ 	font-weight: bold;
+ }
+ .top_list_menu li:first-of-type{
+ 	border: none;
+ }
+  .top_list_menu li:hover{
+  font-size: 18px;
+ }
+.bottom{
+	display: flex;
+ 	align-items: flex-end;
+}
+.bottom i{
+	 font-size: 25px;
+}
+.first_tab{
+	width: 100%;
+	position: absolute;
+ 	border-bottom: 1px solid #E9E9E9;
+ 	border-top: 1px solid #E9E9E9;
+ 	display: none;
+ 	vertical-align: bottom;
+  }
+  .first_tab_active{
+  	display: block;
+  }
+.second_tab{
+	width: 100%;
+	position: absolute;
+ 	border-bottom: 1px solid #E9E9E9;
+ 	border-top: 1px solid #E9E9E9;
+ 	display: none;
+}
+.second_tab_active{
+	display: block;
+}
+@keyframes slideup{
+	from{height: 0px;}
+	to{height: 42px;}
+}
+.brush{
+	height: 0px;
+	display: flex;
+ 	align-items: center;
+ 	overflow: hidden;
+  
+}
+.brush_active{
+ 	height: 42px;
+	animation: slideup 0.5s ease;
+}
+.brush input{
+	display: inline;
+	width: 25px;
+	height: 15px;
+	 border:none;
+ 	margin-right: 3px;
+ 	background-color: transparent;
+}
+.text{
+	height: 0px;
+	display: flex;
+ 	align-items: center;
+ 	overflow: hidden;
+}
+.text_active{
+	height: 42px;
+	animation: slideup 0.5s ease;
+}
+.text input{
+	display: inline;
+	width: 25px;
+	height: 15px;
+	 border:none;
+ 	margin-right: 3px;
+ 	background-color: transparent;
+}
+.txt_input{
+	width: 100%;
+	display: none;
+}
+.txt_input_active{
+	display: block;
+ }
+.txt_input input{
+	width: 100%;
+	border: none;
+	background-color: transparent;
+}
+.txt_input input:focus{
+	border: none;
+	padding: 10px;
+}
+.shape{
+	height: 0px;
+	display: flex;
+ 	align-items: center;
+ 	overflow: hidden;
+}
+.shape_i i{
+	font-size: 20px;
+	color: #333;
+}
+.shape_i_active i{
+	color: #3e9fd2;
+}
+.shape_active{
+	height: 42px;
+	animation: slideup 0.5s ease;
+}
+.shape_color{
+	height: 0px;
+	display: flex;
+ 	align-items: center;
+ 	overflow: hidden;
+}
+.shape_color_active{
+	height: 42px;
+	animation: slideup 0.5s ease;
+}
+.shape_color input{
+	display: inline;
+	width: 25px;
+	height: 15px;
+	 border:none;
+ 	margin-right: 3px;
+ 	background-color: transparent;
+}
+.shape p{
+	color: #333;
+	margin: 0px;
+ 
+}
+.shape_p_active{
+	color:#3e9fd2!important;
+}
+.bg{
+	height: 0px;
+	display: flex;
+ 	align-items: center;
+ 	overflow: hidden;
+}
+.bg_active{
+	height: 42px;
+	animation: slideup 0.5s ease;
+}
+
+.icon{
+	color:#333 ;
+}
+.icon_active{
+	color:#1d719d ;
+}
+.color{
+	width: 15px;
+	height: 15px;
+	background-color: red;
+}
+.color_active{
+	border: 2px solid #3e9fd2;
+	box-shadow: 0px 0px 5px #3e9fd2;
+}
+.color0{
+	background-color: #000000;
+}
+.color1{
+	background-color: #ffffff;
+}
+.color2{
+	background-color: #FF9900;
+}
+.color3{
+	background-color: #CC6699;
+}
+.color4{
+	background-color: #009966;
+}
+.color5{
+	background-color: #996600;
+}
+.color6{
+	background-color: #FF6600;
+}
+.color7{
+	background-color: #FF33CC;
+}
+.save{
+ 	display: none;
+	position: absolute;
+ 	left: 0px;
+ 	background-color: #fff;
+ }
+ .save img{
+ 	z-index: 9;
+ 	-webkit-touch-callout:default;
+ 	pointer-events: auto;
+ }
+.save_active{
+	display: block;
+}
+.save p{
+	text-align: center;
+	font-size: 20px;
+	color: #3e9fd2;
+}
+@media only screen and (min-width: 100px) and (max-width: 320px) {
+	@keyframes slideup{
+	from{height: 0px;}
+	to{height: 28px;}
+}
+ .brush_active{
+ 	height: 28px;
+ }
+ 
+ 
+.text_active{
+	height: 28px;
+	animation: slideup 0.5s ease;
+}
+ 
+.shape_active{
+	height: 28px;
+ }
+ 
+.shape_color_active{
+	height: 28px;
+ }
+ 
+.bg_active{
+	height: 28px;
+ }
+.color{
+	width: 12px;
+	height: 12px;
+ }
+} 
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+		@keyframes slideup{
+	from{height: 0px;}
+	to{height: 70px;}
+}
+ .brush_active{
+ 	height: 70px;
+ }
+ 
+ 
+.text_active{
+	height: 70px;
+	animation: slideup 0.5s ease;
+}
+ 
+.shape_active{
+	height: 70px;
+ }
+ 
+.shape_color_active{
+	height: 70px;
+ }
+ 
+.bg_active{
+	height: 70px;
+ }
+.color{
+	width: 25px;
+	height: 25px;
+ }
+}

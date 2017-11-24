@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" charset="UTF-8">
+ 	<title>Online Painting</title>
+	<link rel="stylesheet" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/style.css" />
+ </head>
+ 
+ <body>
+	<div class="container-fluid">
+		<!--顶部-->
+		<div class="row top">
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 text-left" ><img src="img/logo.png"></div><!--logo-->
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-right"> <!--下拉图标-->
+ 				<i class="iconfont icon-liebiao1 top_list"></i>
+			</div>
+		</div>
+		<div class="top_list_menu">    <!--顶部下拉菜单-->
+		<ul>
+			<li id="new"><i class="iconfont icon-chexiao1"></i>重做</li>
+			<li id="save"><i class="iconfont icon-baocun"></i>保存</li>
+			<li id="about"><i class="iconfont icon-guanyu"></i>关于</li>
+		</ul>
+	</div>
+        <!--画布-->
+		<div class="row map">
+ 				<canvas id="map"></canvas>
+ 		</div>
+ 		<!--底部-->
+ 		<div class="row bottom">  <!--底部图标-->
+ 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center"><div class="icon icon_active"><i class="iconfont icon-huabi"></i></div></div>
+ 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center"><div class="icon"><i class="iconfont icon-ziti"></i></div></div>
+ 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center"><div class="icon"><i class="iconfont icon-tuxing"></i></div></div>
+ 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center"><div class="icon"><i class="iconfont icon-beijingse"></i></div></div>
+ 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center"><div class="icon"><i class="iconfont icon-xiangpica"></i></div></div>
+ 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center"><div class="icon"><i class="iconfont icon-chexiao"></i></div></div>
+ 		</div>
+ 		<div class="row first_tab first_tab_active"><!-- 第一个二级菜单，每次显示一个-->
+  		<div class="container-fluid">
+  			<div class="row brush brush_active">  <!--笔刷二级菜单-->
+  				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-right"><input type="text" placeholder="5" value="5"/>px</div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color0 color_active"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color1"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color2"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color3"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color4"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color5"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color6"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color7"></div></div>
+    		</div>
+    		<div class="row text"> <!--文字二级菜单-->
+    			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-right"><input type="text" placeholder="15" value="15"/>px</div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color0 color_active"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color1"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color2"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color3"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color4"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color5"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color6"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color7"></div></div>
+    		</div>
+    		<div class="row shape"> <!--形状二级菜单-->
+    			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
+    			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><div class="shape_i shape_i_active"><i class="iconfont icon-zhixian"></i></div></div>
+    			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><div class="shape_i"><i class="iconfont icon-juxing"></i></div></div>
+    			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><div class="shape_i"><i class="iconfont icon-yuan"></i></div></div>
+     			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+     			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><p class="shape_p_active">描边</p><p>填充</p> </div>
+    		</div>
+    		<div class="row bg"><!-- 背景二级菜单-->
+    			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+   				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color0 color_active"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color1"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color2"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color3"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color4"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color5"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color6"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color7"></div></div>
+    		</div>
+  		</div>	
+ 		</div>
+ 	 	<div class="row second_tab"><!-- 第二个二级菜单，每次显示一个-->
+ 	 		<div class="container">
+ 	 			<div class="txt_input"> <!--文字输入框二级菜单-->
+   	 				<input type="text" autofocus="autofocus" placeholder="请输入文字" value="请输入文字"/>
+ 	 			</div>
+ 	 			<div class="row shape_color"> <!--形状颜色二级菜单-->
+    			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-right"><input type="text" placeholder="5" value="5"/>px</div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color0 color_active"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color1"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color2"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color3"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color4"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color5"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color6"></div></div>
+  				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-left"><div class="color color7"></div></div>
+    		</div>
+ 	 		</div>
+  	 	</div>
+	</div>
+    <!--  点击保存后显示的div-->
+	<div class="save">
+		<img>
+		<p>长按图片保存</p>
+	</div>
+</body>
+  
+ 
+<script type="text/javascript">
+	if(navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+		var st = document.createElement("script");
+		var pa = document.createElement("script");
+		var b = document.getElementsByTagName('html')[0];
+		st.type = "text/javascript";
+		st.src = "js/style.js";
+		pa.type = "text/javascript";
+		pa.src = "js/paint.js";
+		b.appendChild(st);
+		b.appendChild(pa);
+	} else {
+		var st = document.createElement("script");
+		var pa = document.createElement("script");
+		var b = document.getElementsByTagName('html')[0];
+		st.type = "text/javascript";
+		st.src = "js/style_c.js";
+		pa.type = "text/javascript";
+		pa.src = "js/paint_c.js";
+		b.appendChild(st);
+		b.appendChild(pa);
+	}
+	var overscroll = function(el) {
+		el.addEventListener('touchstart', function() {
+			var top = el.scrollTop,
+				totalScroll = el.scrollHeight,
+				currentScroll = top + el.offsetHeight;
+
+			if(top === 0) {
+				el.scrollTop = 1;
+			} else if(currentScroll === totalScroll) {
+				el.scrollTop = top - 1;
+			}
+		});
+		el.addEventListener('touchmove', function(evt) {
+
+			if(el.offsetHeight < el.scrollHeight)
+				evt._isScroller = true;
+		});
+	}
+	overscroll(document.querySelector('html'));
+	document.body.addEventListener('touchmove', function(evt) {
+ 		if(!evt._isScroller) {
+			evt.preventDefault();
+		}
+	});
+</script>
+ 
+ </html>
